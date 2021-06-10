@@ -4,8 +4,9 @@
 
 for i in *.snpEFF.ann.tsv; do
 
-    F='basename $i .snpEFF.ann.tsv';
+    F=${i%.tsv};
+    echo "$F";
 
-    python3 /home/ajung/info_splitter.py $i "$F".snpEFF.ann.split.xlsx;
+    python3 /Users/anajung/Documents/HandleyLab_Code/info_splitter.py $i "$F".split.xlsx;
 
 done
